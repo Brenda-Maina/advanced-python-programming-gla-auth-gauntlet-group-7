@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lab Activity: The Authentication Gauntlet
 
 Welcome to the Auth Gauntlet! In this 30-45-minute lab, your team will explore four different mechanisms for securing web applications. By the end, you will understand the difference between **stateful** (server-memory) and **stateless** (token-based) authentication.
@@ -299,3 +300,6 @@ Before you finish, the Reporter fills in this table as a comment block at the to
 ---
 
 *Good luck — and remember: if your transport layer is unencrypted, your entire authentication architecture is a complete illusion.*
+=======
+# advanced-python-programming-gla-auth-gauntlet-group-7
+>>>>>>> 17834bd (Initial commit)
