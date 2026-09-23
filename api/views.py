@@ -34,6 +34,10 @@ from rest_framework.response import Response
 @authentication_classes([BasicAuthentication])
 @permission_classes([IsAuthenticated])
 def basic_auth_view(request):
+    auth_header = request.META.get('HTTP_AUTHORIZATION')
+    print(f"Incoming Header: {auth_header}")
+    return Response({"message": "Check your terminal!"})
+
     # ── Driver Task ───────────────────────────────────────────────────────────
     # TODO: Extract the raw Authorization header from request.META and print
     #       it to the terminal with a descriptive label.
