@@ -60,25 +60,26 @@ Authorization: Token <YOUR_TOKEN_WITH_LAST_CHARACTER_CHANGED>
 ### ═══════════════════════════════════════════════════════════════════════════
 
 ### Phase 4 — JWT Login (obtain access and refresh tokens)
-POST {{baseUrl}}/api/jwt/login/ HTTP/1.1
+POST http://127.0.0.1:8000/api/jwt/login/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "username": "admin",
-  "password": "admin123"
+    "username": "admin",
+    "password": "admin123"
 }
 
 ###
 
 ### After sending the login request, temporarily paste the returned token values below.
 ### Do not commit actual JWT values.
-@accessToken = <ACCESS_TOKEN>
+@accessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkwNDY0NjE1LCJpYXQiOjE3OTA0NjI4MTUsImp0aSI6IjVlMDljMTYzZTBlMjQzOTg4YTcwMGVkY2Q5Zjk2Yjg5IiwidXNlcl9pZCI6IjEifQ.k5hkVrRuwYaBPs1UQ0Fipia_hs56ik3KjGpOzES31DQ
 @refreshToken = <REFRESH_TOKEN>
 
 ###
 
 ### Phase 4 — JWT Protected Request
-GET {{baseUrl}}/api/jwt/protected/ HTTP/1.1
+# Paste your access token below, replacing <ACCESS_TOKEN>
+GET http://127.0.0.1:8000/api/jwt/protected/ HTTP/1.1
 Authorization: Bearer {{accessToken}}
 
 ###
